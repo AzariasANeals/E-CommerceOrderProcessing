@@ -11,5 +11,5 @@ comment4.target=void\ testReverseEmpty()
 comment5.params=
 comment5.target=void\ testReverseSingle()
 comment6.params=
-comment6.target=void\ testAppendElement()
+comment6.target=void\ testAppendNothing()
 numComments=7
