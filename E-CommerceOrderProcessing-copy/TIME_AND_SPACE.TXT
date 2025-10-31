@@ -1,0 +1,70 @@
+1. append(Order order) Complexity
+What the method does
+- Creates a new node.
+- If the list is empty → sets the head (constant time).
+- Otherwise → traverses from the head to the end of the list to find the last node.
+- Adds the new node at the end.
+
+Time Complexity:
+In the worst case, you traverse the entire list to reach the last node.
+If there are n nodes in the list, traversal takes n steps.
+
+Time Complexity = O(n)
+
+If the list is empty (head is null), the operation takes O(1).
+But when analyzing worst-case complexity, we consider the longest scenario → O(n).
+
+Space Complexity:
+The method creates one new node, which takes constant space.
+
+Space Complexity = O(1)
+
+2. display() Complexity
+What the method does
+- Starts at the head.
+- Visits each node one-by-one.
+- Prints the order information.
+
+Time Complexity:
+Each node is visited exactly once.
+If there are n orders in the list, there are n loop iterations.
+
+Time Complexity = O(n)
+
+Space Complexity:
+No new data structures are created.
+Only a few pointer/reference variables are used.
+
+Space Complexity = O(1)
+
+3. reverse() Complexity
+What the method does
+- You used the iterative pointer reversal method, which works like this:
+
+Step	Pointer Movement:
+1. Save current.next in nextNode	
+2. Reverse the link: current.next = prev	
+3. Move prev = current	
+4. Move current = nextNode	
+
+This repeats until the list ends.
+
+Time Complexity:
+The loop runs once per node.
+Each iteration does constant-time work (pointer updates).
+So if the list has n nodes:
+
+Time Complexity = O(n)
+
+Space Complexity:
+No extra list or array is created.
+Only 3 pointers (prev, current, nextNode) are used.
+So space usage remains constant:
+
+Space Complexity = O(1)
+
+                    Summary Table
+[Operation]	[Time] [Space]  [Explanation]
+append()	  O(n)	  O(1)	  Traverses list to add node at end
+display()	  O(n)	  O(1)	  Visits each node once
+reverse()	  O(n)	  O(1)	  Re-links nodes using constant pointers
